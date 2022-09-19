@@ -19,7 +19,7 @@ const timeOpenArray = [
 ];
 
 /* Utility Functions */
-
+// Used MDN for template
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -95,14 +95,14 @@ buildResults(locations);
 function buildResults(location) {
   for (let city of location) {
     for (let i = 0; i < hoursOpen; i++) {
-      city.results.push(city.custPerHour());
+      city.results.push(city.custPerHour() * Math.floor(city.avgSales));
       city.totalSales += city.results[i];
     }
   }
 }
 
 /* Create Tabs on HTML */
-
+// Got template from W3 Schools
 function openCity(event, cityName) {
   /* Get all elements with class="tabdata" and hide them */
   let tabdata = document.getElementsByClassName('tabdata');
