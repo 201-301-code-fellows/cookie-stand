@@ -68,9 +68,12 @@ nav {
   padding: 6rem 3rem;
 }
 
-.navbar > {
+.navbar {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  background-color: darkcyan;
+  height: 4vh;
 }
 
 a {
@@ -80,4 +83,8 @@ a {
 
 li {
   display: inline-block;
+  border: solid black 2px;
+  padding: 4px;
+  margin: 0;
+  height: 100%;
 }
