@@ -9,7 +9,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
-section{
+section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,23 +18,22 @@ section{
   width: 30%;
 }
 
-h3{
+h3 {
   display: block;
   font-weight: 700;
   font-size: 4rem;
 }
 
-li{
+li {
   font-size: 2rem;
 }
 
 /* Style the tab */
 .tab {
-  
   border: 1px solid #ccc;
   background-color: #f1f1f1;
 }
-nav{
+nav {
   margin: auto;
   margin-top: 20vh;
   display: flex;
@@ -42,7 +41,6 @@ nav{
   justify-content: center;
   flex-grow: initial;
 }
-
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
@@ -64,12 +62,22 @@ nav{
   background-color: #ccc;
 }
 
-
 /* Style the tab content */
 .tabdata {
   display: none;
   padding: 6rem 3rem;
-
 }
 
+.navbar > {
+  display: flex;
+  flex-direction: row;
+}
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  display: inline-block;
+}
