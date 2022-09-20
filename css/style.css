@@ -104,3 +104,9 @@ footer {
 footer > p {
   font-size: 2rem;
 }
+
+th{
+  border: solid black 2px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
