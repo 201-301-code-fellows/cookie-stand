@@ -46,6 +46,10 @@ nav {
   flex-grow: initial;
 }
 
+main {
+  height: 50vh;
+}
+
 /* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: inherit;
@@ -76,8 +80,15 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   background-color: darkcyan;
   height: 4vh;
+}
+
+.navbar__li--group {
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 
 a {
@@ -85,27 +96,28 @@ a {
   color: black;
 }
 
-.navLi {
+.navbar__li {
   display: inline-block;
-  border: solid black 2px;
   padding: 4px;
   margin: 0;
   height: 100%;
 }
-.navLi:last-child {
+.navbar__li--group:last-child {
   margin-right: 1vw;
 }
 
-.navLi:first-child {
+.navbar__li--group:first-child {
   margin-left: 1vw;
+}
+
+.navbar__li--active {
+  border-bottom: solid black 4px;
 }
 
 footer {
   height: 20vh;
   background-color: darkcyan;
   margin-bottom: 0%;
-  position: relative;
-  bottom: -75px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
