@@ -2,6 +2,7 @@
 
 const hoursOpen = 14; /* 6AM to 7PM totals to 14 hours */
 const timeOpenArray = [
+  'Time:',
   '6am:',
   '7am:',
   '8am:',
@@ -16,6 +17,14 @@ const timeOpenArray = [
   '5pm:',
   '6pm:',
   '7pm:',
+];
+
+const cityArgs = [
+  ['Seattle', 23, 65, 6.3],
+  ['Tokyo', 3, 24, 1.2],
+  ['Dubai', 11, 38, 3.7],
+  ['Paris', 20, 38, 2.3],
+  ['Lima', 2, 16, 4.6],
 ];
 
 /* Utility Functions */
@@ -42,11 +51,15 @@ City.prototype.custPerHour = function () {
   return getRandomInt(this.minCust, this.maxCust);
 };
 
-new City('Seattle', 23, 65, 6.3);
-new City('Tokyo', 3, 24, 1.2);
-new City('Dubai', 11, 38, 3.7);
-new City('Paris', 20, 38, 2.3);
-new City('Lima', 2, 16, 4.6);
+City.prototype.render = function () {
+  //TODO appendChild can go here
+  //TODO building the TR and TDs can go here
+};
+
+/* Generate new City objects that contain the data in cityArgs array */
+for (let data of cityArgs) {
+  new City(...data);
+}
 
 /* Generate objects for each location */
 buildResults(locations);
@@ -61,30 +74,13 @@ function buildResults(location) {
   }
 }
 
-/* Create Sections for each button in HTML */
-function createSections(location) {
-  /* Grab the main element to insert sections */
-  let mainElement = document.querySelector('main');
-  /* Create the sections elements in HTML */
-  let section = document.createElement('section');
-  section.setAttribute('class', `tabdata ${location.cityName.toLowerCase()}`);
-  mainElement.appendChild(section);
-}
-/* Generate a heading element */
+const table = document.querySelector('table');
 
-function createH3(location) {
-  let h3 = document.createElement('h3');
-  h3.innerText = `${location.cityName} Sales Data`;
-  document.querySelector(`.${location.cityName.toLowerCase()}`).appendChild(h3);
-}
-
-/* Generate UL and LIs in each tab */
-
-/* Generate HTML for each city */
-function generateHTML() {
-  for (let city of locations) {
-    createSections(city);
-    createH3(city);
+function createHeading() {
+  for (let time of timeOpenArray) {
+    const tableHead = document.createElement('th');
+    tableHead.innerText = `${time}  `;
+    table.appendChild(tableHead);
   }
 }
-generateHTML();
+createHeading();
