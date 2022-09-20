@@ -1,5 +1,6 @@
 body {
-  background-color: aqua;
+  background-image: url(../img/waves.jpg);
+  background-position: bottom;
 }
 main {
   display: flex;

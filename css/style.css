@@ -27,6 +27,9 @@ h3 {
 
 li {
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Style the tab */
@@ -95,4 +98,19 @@ a {
 
 .navLi:first-child {
   margin-left: 1vw;
+}
+
+footer {
+  height: 20vh;
+  background-color: darkcyan;
+  margin-bottom: 0%;
+  position: relative;
+  bottom: -75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+footer > p {
+  font-size: 2rem;
 }
