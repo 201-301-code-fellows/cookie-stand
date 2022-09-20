@@ -47,7 +47,12 @@ nav {
 }
 
 main {
-  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20vh 30% 10% 30%;
+  height: 41vh;
 }
 
 /* Style the buttons that are used to open the tab content */

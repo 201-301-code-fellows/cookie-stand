@@ -2,30 +2,23 @@ body {
   background-image: url(../img/waves.jpg);
   background-position: bottom;
 }
-main {
+
+.brand {
+  height: 120%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 20vh 30% 0 30%;
+  justify-content: center;
+  margin-bottom: 3em;
+}
+
+.brand__container {
   background-color: burlywood;
-  height: 50vh;
   border-radius: 50%;
 }
 
-h1 {
-  font-size: 8rem;
-  font-weight: 700;
-}
-
-.brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .brand--heading {
+  height: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,6 +26,7 @@ h1 {
 }
 
 .brand--img {
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,5 +34,12 @@ h1 {
 }
 
 img {
-  width: 70%;
+  margin-top: 2em;
+  width: 200%;
+}
+
+h2 {
+  width: 200%;
+  font-size: 4.9rem;
+  font-weight: 700;
 }
