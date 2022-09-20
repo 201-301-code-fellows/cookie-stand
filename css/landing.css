@@ -81,7 +81,7 @@ a {
   color: black;
 }
 
-.navLi {
+li {
   display: inline-block;
   border: solid black 2px;
   padding: 4px;
