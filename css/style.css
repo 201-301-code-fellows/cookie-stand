@@ -106,7 +106,15 @@ footer > p {
 }
 
 th{
+  padding: 0 1rem 0 1rem;
   border: solid black 2px;
   font-size: 1.3rem;
   font-weight: 700;
+}
+
+td{
+  padding: 0 1rem 0 1rem;
+  border: solid black 2px;
+  font-size: 1.3rem;
+  font-weight: 400;
 }
