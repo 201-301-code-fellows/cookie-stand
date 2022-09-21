@@ -16,7 +16,9 @@ const timeOpenArray = [
   '5pm:',
   '6pm:',
   '7pm:',
+  'Total/City:',
 ];
+
 /* Arguments to be used when invocating City constructor */
 const cityArgs = [
   ['Seattle', 23, 65, 6.3],
@@ -27,7 +29,7 @@ const cityArgs = [
 ];
 
 /* Select the table element from HTML to build the table on */
-const table = document.querySelector('table');
+let table = document.querySelector('table');
 
 /* Utility Functions */
 // Used MDN for template
@@ -50,10 +52,11 @@ function City(cityName, minCust, maxCust, avgSales) {
 }
 
 City.prototype.custPerHour = function () {
-  for (let i = 0; i < timeOpenArray.length - 1; i++) {
+  for (let i = 0; i < timeOpenArray.length - 2; i++) {
     const num = Math.floor(this.avgSales * randInt(this.minCust, this.maxCust));
     this.totalSales += num;
     this.results.push(num);
+    totalArray[i] += num;
   }
 };
 
@@ -67,6 +70,9 @@ City.prototype.render = function () {
     tableData.innerText = data;
     tableRow.appendChild(tableData);
   }
+  tableData = document.createElement('td');
+  tableData.innerText = this.totalSales;
+  tableRow.appendChild(tableData);
 };
 
 /* Generate new City objects that contain the data in cityArgs array */
@@ -81,12 +87,26 @@ function createHeading() {
     table.appendChild(tableHead);
   }
 }
+const totalArray = [];
+for (let i = 0; i < timeOpenArray.length - 2; i++) {
+  totalArray.push(0);
+}
 
 function buildThePage() {
   createHeading();
+
   for (let city of locations) {
     city.custPerHour();
     city.render();
+    // totalsForRender.push(city.totalSales);
+  }
+  const tfoot = document.createElement('tfoot');
+  table.appendChild(tfoot);
+  totalArray.unshift('Total:');
+  for (let totals of totalArray) {
+    const td = document.createElement('td');
+    td.innerText = totals;
+    tfoot.appendChild(td);
   }
 }
 buildThePage();

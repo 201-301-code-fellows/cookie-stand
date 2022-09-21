@@ -52,8 +52,6 @@ main {
   height: 41vh;
 }
 
-
-
 .navbar {
   display: flex;
   flex-direction: row;
@@ -105,16 +103,20 @@ footer > p {
   font-size: 2rem;
 }
 
-th{
-  padding: 0 1rem 0 1rem;
+th {
+  padding: 0.5rem 1rem 0.5rem 1rem;
   border: solid black 2px;
   font-size: 1.3rem;
   font-weight: 700;
 }
 
-td{
-  padding: 0 1rem 0 1rem;
+td {
+  padding: 0.6rem 1rem 0.6rem 1rem;
   border: solid black 2px;
   font-size: 1.3rem;
   font-weight: 400;
+}
+
+tr:nth-last-of-type(even) {
+  background-color: lightgrey;
 }
