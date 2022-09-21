@@ -19,6 +19,7 @@ const timeOpenArray = [
   'Total/City:',
 ];
 let totalSales = 0; // totalSales will track the sales for all stores and all hours
+
 /* Arguments to be used when invocating City constructor */
 const cityArgs = [
   ['Seattle', 23, 65, 6.3],

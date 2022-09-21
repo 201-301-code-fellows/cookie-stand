@@ -13,8 +13,6 @@ html {
 section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: auto;
   width: 30%;
 }
@@ -46,17 +44,14 @@ nav {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 20vh 30% 10% 30%;
-  height: 41vh;
 }
 
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+
   background-color: darkcyan;
   height: 4vh;
 }
@@ -120,4 +115,8 @@ td {
 tr:nth-last-of-type(even),
 tfoot {
   background-color: lightgrey;
+}
+
+.copyright {
+  font-size: 1rem;
 }
