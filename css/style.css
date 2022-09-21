@@ -117,6 +117,7 @@ td {
   font-weight: 400;
 }
 
-tr:nth-last-of-type(even) {
+tr:nth-last-of-type(even),
+tfoot {
   background-color: lightgrey;
 }

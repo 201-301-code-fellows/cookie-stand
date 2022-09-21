@@ -18,7 +18,7 @@ const timeOpenArray = [
   '7pm:',
   'Total/City:',
 ];
-
+let totalSales = 0; // totalSales will track the sales for all stores and all hours
 /* Arguments to be used when invocating City constructor */
 const cityArgs = [
   ['Seattle', 23, 65, 6.3],
@@ -57,6 +57,7 @@ City.prototype.custPerHour = function () {
     this.totalSales += num;
     this.results.push(num);
     totalArray[i] += num;
+    totalSales += num;
   }
 };
 
@@ -103,6 +104,8 @@ function buildThePage() {
   const tfoot = document.createElement('tfoot');
   table.appendChild(tfoot);
   totalArray.unshift('Total:');
+  totalArray.push(`Total: ${totalSales}`);
+
   for (let totals of totalArray) {
     const td = document.createElement('td');
     td.innerText = totals;
