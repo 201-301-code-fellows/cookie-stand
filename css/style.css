@@ -9,6 +9,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  color: rgb(31, 45, 45);
 }
 section {
   display: flex;

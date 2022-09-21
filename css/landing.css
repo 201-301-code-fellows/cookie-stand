@@ -95,6 +95,7 @@ h2 {
 
 p {
   font-size: 2rem;
+  color:rgb(26, 31, 31);
 }
 
 button {
@@ -106,6 +107,7 @@ button {
   transition: transform ease 0.3s;
   transition: box-shadow ease 0.3s;
   transform: background-color ease-in 2s;
+  color:rgb(51, 62, 62);
 }
 
 button:hover {
