@@ -121,3 +121,26 @@ tfoot {
 .copyright {
   font-size: 1rem;
 }
+
+.salespage{
+  display: flex;
+  flex-direction: row;
+}
+
+fieldset{
+  display: flex;
+  flex-direction: column;
+  margin-right: 3rem;
+}
+
+label{
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+button{
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #444;
+  color: antiquewhite;
+}
