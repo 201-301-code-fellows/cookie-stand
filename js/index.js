@@ -9,14 +9,21 @@ app.use(express.static(path.join(__dirname + '/../', 'public')));
 const fs = require('fs');
 let file = fs.readFileSync('cities.json');
 let data = JSON.parse(file);
-console.log(data);
+exports.theFile = () => {
+  return data;
+};
 
 app.get('/', (req, res) => {
   res.sendFile('index.html');
 });
 
 app.get('/sales', (req, res) => {
+  console.log('log');
   res.sendFile('sales.html');
+});
+
+app.post('/sales', (req, res) => {
+  console.log(req);
 });
 
 const server = app.listen(listeningPort, function (err) {

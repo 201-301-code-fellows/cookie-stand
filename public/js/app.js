@@ -91,10 +91,10 @@ function resetData() {
   }
 }
 /* Select the button and wait for a click to add new location */
-const button = document.querySelector('button');
-button.addEventListener('click', function (event) {
-  event.preventDefault();
+const form = document.querySelector('form');
+form.addEventListener('submit', function (event) {
   new City(...grabData());
+  event.preventDefault();
   resetData();
   locations[locations.length - 1].custPerHour();
   locations[locations.length - 1].render();
@@ -163,5 +163,3 @@ function buildThePage() {
   footerBuilder();
 }
 buildThePage();
-
-
