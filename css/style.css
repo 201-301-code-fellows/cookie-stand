@@ -8,7 +8,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif, serif;
   color: rgb(31, 45, 45);
 }
 section {
@@ -45,7 +45,7 @@ nav {
 main {
   display: flex;
   flex-direction: column;
- height: 80vh;
+  height: 80vh;
 }
 
 .navbar {
@@ -128,7 +128,6 @@ tfoot {
   width: 90vw;
   justify-content: flex-start;
   margin-left: 10rem;
-
 }
 
 fieldset {
@@ -147,10 +146,10 @@ button {
   padding: 1rem;
   background-color: #444;
   color: antiquewhite;
+  font-family: serif;
 }
 
 article {
-  
   height: 3rem;
   display: flex;
   align-items: center;
@@ -160,7 +159,6 @@ article {
   font-style: 700;
   font-size: 1.31rem;
   padding-right: 4rem;
- 
 }
 
 .success {
@@ -172,13 +170,20 @@ article {
   margin-right: 1rem;
   margin-left: -8rem;
   padding: 1rem;
-
 }
 
-table{
+table {
   height: 50%;
 }
-.fail{
-  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+.fail {
+  clip-path: polygon(
+    0% 20%,
+    60% 20%,
+    60% 0%,
+    100% 50%,
+    60% 100%,
+    60% 80%,
+    0% 80%
+  );
   background-color: rgba(255, 0, 0, 0.573);
 }
