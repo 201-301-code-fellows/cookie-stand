@@ -45,7 +45,7 @@ nav {
 main {
   display: flex;
   flex-direction: column;
-  margin: 20vh 30% 10% 30%;
+ height: 80vh;
 }
 
 .navbar {
@@ -122,25 +122,63 @@ tfoot {
   font-size: 1rem;
 }
 
-.salespage{
+.salespage {
   display: flex;
   flex-direction: row;
+  width: 90vw;
+  justify-content: flex-start;
+  margin-left: 10rem;
+
 }
 
-fieldset{
+fieldset {
   display: flex;
   flex-direction: column;
   margin-right: 3rem;
 }
 
-label{
+label {
   font-size: 1.5rem;
   margin-top: 1rem;
 }
 
-button{
+button {
   margin-top: 2rem;
   padding: 1rem;
   background-color: #444;
   color: antiquewhite;
+}
+
+article {
+  
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  margin-left: -8rem;
+  font-style: 700;
+  font-size: 1.31rem;
+  padding-right: 4rem;
+ 
+}
+
+.success {
+  background-color: rgba(0, 128, 0, 0.472);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  margin-left: -8rem;
+  padding: 1rem;
+
+}
+
+table{
+  height: 50%;
+}
+.fail{
+  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  background-color: rgba(255, 0, 0, 0.573);
 }

@@ -56,6 +56,7 @@ function randInt(min, max) {
 
 /* This array is where all data is pulled from for all functions to */
 const locations = [];
+const locationNamesStr = [];
 
 /* Constructor for cties */
 function City(cityName, minCust, maxCust, avgSales) {
@@ -66,6 +67,7 @@ function City(cityName, minCust, maxCust, avgSales) {
   this.results = [this.cityName];
   this.totalSales = 0;
   locations.push(this);
+  locationNamesStr.push(this.cityName);
 }
 
 /* Grab data from input fields, and store in a variable */
@@ -90,15 +92,42 @@ function resetData() {
     inputs.value = '';
   }
 }
+
+function flashSuccess() {
+  const pSelect = document.querySelector('p');
+  pSelect.remove();
+  const article = document.querySelector('article');
+  const p = document.createElement('p');
+  p.innerText = 'Location Created!';
+  article.setAttribute('class', 'success');
+  article.appendChild(p);
+}
+
+function flashFail() {
+  const pSelect = document.querySelector('p');
+  pSelect.remove();
+  const p = document.createElement('p');
+  p.innerText = 'This location already exists!';
+  const article = document.querySelector('article');
+  article.removeAttribute('class', 'success');
+  article.setAttribute('class', 'fail');
+  article.appendChild(p);
+}
+
 /* Select the button and wait for a click to add new location */
-const button = document.querySelector('button');
-button.addEventListener('click', function (event) {
+const form = document.querySelector('form');
+form.addEventListener('submit', function (event) {
   event.preventDefault();
-  new City(...grabData());
-  resetData();
-  locations[locations.length - 1].custPerHour();
-  locations[locations.length - 1].render();
-  footerBuilder();
+  if (grabData()[0] && !locationNamesStr.includes(grabData()[0])) {
+    flashSuccess();
+    new City(...grabData());
+    resetData();
+    locations[locations.length - 1].custPerHour();
+    locations[locations.length - 1].render();
+    footerBuilder();
+  } else {
+    flashFail();
+  }
 });
 
 City.prototype.custPerHour = function () {
