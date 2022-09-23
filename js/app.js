@@ -139,7 +139,7 @@ City.prototype.custPerHour = function () {
     totalSales += num;
   }
 };
-
+/* Each object will render it own data */
 City.prototype.render = function () {
   const tableRow = document.createElement('tr');
   table.appendChild(tableRow);
